@@ -7,49 +7,80 @@
     <title>Sun Reminder</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
         body {
             margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
             padding: 30px;
             font-family: Arial, Helvetica, sans-serif;
             background: transparent;
         }
 
         .sun-card {
-            text-align: center;
-            max-width: 800px;
+            width: 100%;
+            max-width: 650px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 35px;
+            text-align: center;
             background: #ffffff;
             border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .sun-title {
-            font-size: 48px;
+            margin-bottom: 25px;
+            font-size: 42px;
             font-weight: bold;
-            margin-bottom: 30px;
+            color: #333333;
         }
 
         .widget-container {
-            width: 680px;
-            height: 1200px;
+            width: 510px;
+            height: 900px;
             margin: 0 auto;
             overflow: hidden;
         }
 
         .widget-container iframe {
+            display: block;
             width: 170px;
             height: 300px;
+            margin: 0;
+            padding: 0;
             border: 0;
-            transform: scale(4);
+            transform: scale(3);
             transform-origin: top left;
         }
 
         .sun-message {
-            margin-top: 30px;
-            font-size: 32px;
+            margin-top: 25px;
+            font-size: 27px;
             font-weight: bold;
             line-height: 1.5;
+            color: #333333;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .sun-card {
+                padding: 15px;
+            }
+
+            .sun-title {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -65,14 +96,16 @@
         <div class="widget-container">
             <iframe
                 src="https://www.sunsmart.com.au/uvalert/widget.aspx?locationid=140"
-                scrolling="no">
+                scrolling="no"
+                frameborder="0"
+                allowtransparency="true"
+                title="SunSmart UV Alert">
             </iframe>
         </div>
 
         <div class="sun-message">
             If the UV index is 3 or above,<br>
             remember to<br><br>
-
             ☀️ SLIP • SLOP • SLAP • SEEK • SLIDE ☀️
         </div>
 
