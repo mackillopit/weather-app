@@ -16,60 +16,73 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            min-height: 100%;
         }
 
         body {
-            padding: 30px;
+            padding: 20px;
             font-family: Arial, Helvetica, sans-serif;
             background: transparent;
         }
 
         .sun-card {
             width: 100%;
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 35px;
+            padding: 30px;
             text-align: center;
             background: #ffffff;
-            border-radius: 20px;
+            border-radius: 18px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .sun-title {
-            margin-bottom: 25px;
-            font-size: 42px;
+            margin-bottom: 20px;
+            font-size: 36px;
             font-weight: bold;
             color: #333333;
         }
 
+        /*
+         * SunSmart widget
+         *
+         * Original iframe is deliberately wider than 170px.
+         * This prevents the right-hand side being cut off.
+         *
+         * 220px x 2.5 = 550px displayed width
+         * 320px x 2.5 = 800px displayed height
+         */
+
         .widget-container {
-            width: 510px;
-            height: 900px;
+            width: 550px;
+            height: 800px;
             margin: 0 auto;
             overflow: hidden;
         }
 
         .widget-container iframe {
             display: block;
-            width: 170px;
-            height: 300px;
+
+            width: 220px;
+            height: 320px;
+
             margin: 0;
             padding: 0;
             border: 0;
-            transform: scale(3);
+
+            transform: scale(2.5);
             transform-origin: top left;
         }
 
         .sun-message {
-            margin-top: 25px;
-            font-size: 27px;
+            margin-top: 20px;
+            font-size: 24px;
             font-weight: bold;
             line-height: 1.5;
             color: #333333;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
+
             body {
                 padding: 10px;
             }
@@ -79,7 +92,7 @@
             }
 
             .sun-title {
-                font-size: 32px;
+                font-size: 30px;
             }
         }
     </style>
@@ -94,6 +107,7 @@
         </div>
 
         <div class="widget-container">
+
             <iframe
                 src="https://www.sunsmart.com.au/uvalert/widget.aspx?locationid=140"
                 scrolling="no"
@@ -101,11 +115,13 @@
                 allowtransparency="true"
                 title="SunSmart UV Alert">
             </iframe>
+
         </div>
 
         <div class="sun-message">
             If the UV index is 3 or above,<br>
             remember to<br><br>
+
             ☀️ SLIP • SLOP • SLAP • SEEK • SLIDE ☀️
         </div>
 
