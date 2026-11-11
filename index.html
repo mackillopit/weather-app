@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mackillop Sun Reminder</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: transparent;
+        }
+
+        .sun-card {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .sun-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sun-message {
+            margin-top: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        iframe {
+            border: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sun-card">
+
+        <div class="sun-title">
+            ☀️ SUN REMINDER
+        </div>
+
+        <iframe
+            src="https://www.sunsmart.com.au/uvalert/widget.aspx?locationid=140"
+            width="170"
+            height="300"
+            scrolling="no">
+        </iframe>
+
+        <div class="sun-message">
+            If the UV index is 3 or above,<br>
+            remember to<br><br>
+
+            ☀️ SLIP • SLOP • SLAP • SEEK • SLIDE ☀️
+        </div>
+
+    </div>
+
+</body>
+</html>
