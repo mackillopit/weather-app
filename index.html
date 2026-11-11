@@ -26,7 +26,7 @@
 
         .sun-card {
             width: 100%;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
             padding: 30px;
             text-align: center;
@@ -37,51 +37,49 @@
 
         .sun-title {
             margin-bottom: 20px;
-            font-size: 36px;
+            font-size: 34px;
             font-weight: bold;
             color: #333333;
         }
 
         /*
-         * SunSmart widget
+         * Widget is displayed at 2x.
          *
-         * Original iframe is deliberately wider than 170px.
-         * This prevents the right-hand side being cut off.
-         *
-         * 220px x 2.5 = 550px displayed width
-         * 320px x 2.5 = 800px displayed height
+         * We've given the original iframe much more width
+         * so the right-hand side isn't clipped.
          */
 
         .widget-container {
-            width: 550px;
-            height: 800px;
+            width: 650px;
+            height: 650px;
             margin: 0 auto;
             overflow: hidden;
+            text-align: left;
         }
 
         .widget-container iframe {
             display: block;
 
-            width: 220px;
-            height: 320px;
+            width: 325px;
+            height: 325px;
 
             margin: 0;
             padding: 0;
             border: 0;
 
-            transform: scale(2.5);
+            transform: scale(2);
             transform-origin: top left;
         }
 
         .sun-message {
             margin-top: 20px;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             line-height: 1.5;
             color: #333333;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 750px) {
 
             body {
                 padding: 10px;
@@ -92,7 +90,7 @@
             }
 
             .sun-title {
-                font-size: 30px;
+                font-size: 28px;
             }
         }
     </style>
